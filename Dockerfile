@@ -1,2 +1,2 @@
-FROM doccano/doccano:1.8.5
+FROM doccano/doccano:latest
 CMD ["doccano", "webserver", "--port", "8000"]
