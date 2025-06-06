@@ -1,2 +1,2 @@
 FROM doccano/doccano:latest
-CMD ["doccano", "webserver", "--port", "8000"]
+ENTRYPOINT ["gunicorn", "backend.app:app", "-b", "0.0.0.0:8000", "-k", "uvicorn.workers.UvicornWorker"]
