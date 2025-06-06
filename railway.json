@@ -1,0 +1,8 @@
+{
+  "build": {
+    "builder": "DOCKERFILE"
+  },
+  "deploy": {
+    "startCommand": "doccano webserver --port 8000"
+  }
+}
