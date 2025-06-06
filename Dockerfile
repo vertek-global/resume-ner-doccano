@@ -21,12 +21,12 @@ WORKDIR /app
 # Copy entire repo contents
 COPY . .
 
-# Install Python dependencies from backend/
+# Install backend dependencies
 RUN pip install --upgrade pip
 RUN pip install -r backend/requirements.txt
 
-# Set working directory again just in case
-WORKDIR /app
+# ⬅️⬅️⬅️ NEW LINE: install Doccano from source
+RUN pip install .
 
-# Run Doccano webserver
+# Run Doccano
 CMD ["doccano", "webserver", "--port", "8000"]
